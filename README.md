@@ -1,0 +1,1 @@
+Attempt at authenticating a HTTP request with client certificates in iOS

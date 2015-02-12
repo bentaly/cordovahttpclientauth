@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="com.boldrocket.httpclientcertauthentication" version="1.0.0">
+    <name>Authenticating an HTTP Request with Client Certificates in iOS</name>
+    <author>Ben Taliadoros</author>
+    <description>Cordova / PhoneGap Plugin To authenticate a client cert through mutual authentication</description>
+    <keywords>cordova, two-way, mutual, authentication, http, https, ssl, client, certificate</keywords>
+    <license>MIT</license>
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+    <js-module src="www/clientcertcheck.js" name="ClientCertCheck">
+        <clobbers target="clientcertcheck" />
+    </js-module>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="ClientCertCheck">
+                <param name="ios-package" value="ClientCertCheck" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/ClientCertCheck.h" />
+        <source-file src="src/ios/ClientCertCheck.m" />
+    </platform>
+</plugin>
