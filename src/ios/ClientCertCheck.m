@@ -5,8 +5,15 @@
 
 @implementation ClientCertCheck
 
-- (void)open:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options
+
+- (void)open:(NSMutableArray *)command
 {
+    NSArray *arguments = command.arguments;
+    NSDictionary *options = [arguments objectAtIndex:0];
+
+//new above
+// - (void)open:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options
+// {
     NSLog(@"Arguments: %@", arguments);
     NSLog(@"Options: %@", options);
     
