@@ -1,7 +1,7 @@
 #import "Foundation/Foundation.h"
 #import "Cordova/CDV.h"
 
-@interface JailbreakDetection : CDVPlugin
+@interface ClientCertCheck : CDVPlugin
 
 - (void) open:(CDVInvokedUrlCommand*)command;
 
